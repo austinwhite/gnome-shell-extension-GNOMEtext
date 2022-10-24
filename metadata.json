@@ -1,0 +1,10 @@
+{
+    "description" : "A metronome.",
+    "name" : "metroGNOME",
+    "shell-version" : [
+        "42"
+    ],
+    "url" : "https://github.com/austinwhite/gnome-shell-extension-metroGNOME",
+    "uuid" : "metroGNOME@austinwhite.com",
+    "version" : 1
+}
