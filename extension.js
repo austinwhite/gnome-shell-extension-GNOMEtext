@@ -1,14 +1,24 @@
-const St = imports.gi.St;
+const {St, Clutter} = imports.gi;
 const Main = imports.ui.main;
 
-function init () {
+let panelButton;
 
+function init () {
+    panelButton = new St.Bin({
+        style_class : "panel-button",
+    });
+    let panelButtonText = new St.Label({
+        style_class : "my-panel-text",
+        text : "PLACEHOLDER TEXT",
+        y_align: Clutter.ActorAlign.CENTER,
+    });
+    panelButton.set_child(panelButtonText);
 }
 
 function enable () {
-
+    Main.panel._rightBox.insert_child_at_index(panelButton, 0);
 }
 
 function disable () {
-
+    Main.panel._rightBox.remove_child(panelButton);
 }
